@@ -45,11 +45,11 @@ const Home = () => {
 
       {/* save resume section */}
 
-      <div className="saveresume-container">
+      {/* <div className="saveresume-container">
         <div className="saveresume-wrapper">
           <div>Save time with resume examples </div>
         </div>
-      </div>
+      </div> */}
       {/* <div className='career-path-conatiner'>
                     <div className='career-path'>
                         <h2>Resume Templates for Every Career Path.</h2>
@@ -185,7 +185,7 @@ const Home = () => {
           <p className="faq-p">Resume Builder FAQ.</p>
           <div className="underline "></div>
 
-          <div className="first-faq-content">
+          {/* <div className="first-faq-content">
             <h2 className="faq-p fsize">Why should I use a resume builder?</h2>
             <p className="f-25size mt-10">
               Using a resume builder makes the process of creating a resume
@@ -278,7 +278,57 @@ const Home = () => {
                 An extract with your professional profile or job objective
               </li>
             </ul>
-          </div>
+          </div> */}
+          <div className="faq-section">
+        <div className="faq-wraper">
+            <div className="faq-box">
+                   <button className="accordion"> <p>Why should I use a resume builder?</p></button>
+                   <div className="panel">
+                   Using a resume builder makes the process of creating a resume significantly faster and easier. Ever tried building your resume with Word? <br/>
+                   The whole process is complicated; you make a SMALL change to your resume and the whole design is completely messed up.<br/>
+                   With a resume builder, you don't have to worry about the hassle of  creating a resume, including font selection, layout, formatting, etc. <br/>
+                   All you have to do is choose a resume template, fill it out, and you're ready to start applying for jobs!
+                   </div>
+            </div>
+            
+            <div className="faq-box">
+                <button className="accordion"><p>How long is my domain name valid? </p></button>
+                <div className="panel">
+                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
+                   </div>
+            </div>
+
+            <div className="faq-box">
+                <button className="accordion"><p>Can I sell my domain name?</p></button>
+                <div className="panel">
+                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
+                   </div>
+            </div>
+        </div>
+
+        <div className="faq-wraper-two">
+             <div className="faq-box">
+                    <button className="accordion"><p>What is your domain name?</p></button>
+                    <div className="panel">
+                        When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
+                       </div>
+            </div>
+            
+            <div className="faq-box">
+               <button className="accordion"> <p>How long is my domain name valid? </p></button>
+               <div className="panel">
+                When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
+               </div>
+            </div>
+
+            <div className="faq-box">
+                <button className="accordion "><p>Can I sell my domain name?</p></button>
+                <div className="panel">
+                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
+                   </div>
+            </div>
+        </div>
+        </div>
         </div>
       </div>
     </>

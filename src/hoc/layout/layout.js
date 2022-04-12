@@ -33,7 +33,7 @@ const Layout = (props) => {
             {/* button for login */}
             <button className="btn button1">Register</button>
             <button className="btn button1 btn-sign">
-                Sign In
+             Sign In
             </button>
           </ul>
         </div>
@@ -50,7 +50,13 @@ const Layout = (props) => {
               <h2 className="white f-40size m-left">Resume</h2>
             </div>
             <div className=" m-left white">Connect with us on social media</div>
-            <div></div>
+            <ul class="footer-links">
+              <li><a href="#"> <i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"> <i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"> <i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"> <i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"> <i class="fa fa-instagram"></i></a></li>
+            </ul>
           </div>
           <div className="footersection2">
             <div className="white">

@@ -13,8 +13,9 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid rgb(212, 209, 209);
+    /* border-bottom: 2px solid rgb(212, 209, 209); */
     /* box-shadow: 2px 2px 15px #e9e5e5; */
+    box-shadow: rgb(0 0 0 / 15%) 0px 3px 3px 0px;
 }
 
 .logo {
@@ -63,7 +64,7 @@ a:hover {
 
 .btn {
     display: inline-block;
-    margin: 25px;
+    margin: 20px 16px;
     border: none;
     background-color: white;
     text-align: center;
@@ -73,10 +74,12 @@ a:hover {
 }
 
 .button1 {
-    background-color:rgb(43 ,40, 67);
+    background-color: rgb(43 ,40, 67);
     border: 2px solid rgb(43 ,40, 67);
-    border-radius: 6px;
-    padding: 5px;
+    border-radius: 25px;
+    padding: 7px 9px;
+    font-size: 12px;
+    letter-spacing: 1.0px;
     color: white;
     font-weight: 600;
 }
@@ -87,9 +90,12 @@ a:hover {
 }
 
 .btn-sign {
-    border-radius: 4px;
+    border-radius: 25px;
+    font-size: 12px;
     background-color: white;
     color: black;
+    font-weight: 600;
+    letter-spacing: 1.0px;
 }
 
 .btn-sign:hover {
@@ -99,19 +105,23 @@ a:hover {
 
 
 .btn-get {
-    margin-top: 5px;
-    padding: 15px;
-    color: white;
-    background-color: rgb(43 ,40, 67);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+        margin-top: 5px;
+        padding: 15px;
+        color: white;
+        background-color: rgb(43 ,40, 67);
+        border: 4px solid transparent;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.0px;
 }
 
 .btn-get:hover {
     background-color: white;
     color: black;
-    border: 2px solid rgb(43 ,40, 67);
+    border: 4px solid rgb(43 ,40, 67);
+    border-radius: 15px;
 }
 
 .conatiner-wrapper{
@@ -125,10 +135,10 @@ a:hover {
 .text-wrapper {
     text-align: left;
     display: flex;
-    float: left;
+    /* float: left; */
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     width:50%;
     margin-left: 50px;
 }
@@ -142,7 +152,10 @@ a:hover {
 
 .text-p {
     font-size: 20px;
-    letter-spacing: 1.5px;
+    /* letter-spacing: 1.5px; */
+    letter-spacing: 0.5px;
+    line-height: 2rem;
+    font-weight: 400;
 }
 
 .video-section {
@@ -162,12 +175,12 @@ a:hover {
 }
 
 .underline {
-    background-color:rgb(216,66,71);
+    background-color: rgb(39 148 186);
     border-radius: 3px;
-    width: 100px;
+    width: 310px;
     height: 6px;
     text-align: center;
-    margin: 0 auto;
+    margin: 3px auto;
 }
 
 .text-container {
@@ -201,7 +214,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 25px;
+    padding: 60px;
     font-size: 50px;
     font-weight: 800;
     color: white;
@@ -330,12 +343,14 @@ a:hover {
 }
 .footer-content{
     display: flex;
+    justify-content: space-evenly;
 }
 .faq-p{
     text-align: center;
     color: rgb(43 ,40, 67);
     font-size: 35px;
     text-transform: capitalize;
+    font-weight: 600;
 }
 .fsize{
     text-align: justify;
@@ -347,7 +362,7 @@ a:hover {
     justify-content: center;
 }
 .faq-content{
-    width:50%;
+    /* width:50%; */
 }
 .first-faq-content{
     display: flex;
@@ -367,19 +382,151 @@ a:hover {
     font-size: 40px;
 }
 .footersection1{
-    width:50%;
+    /* width:50%; */
 }
 .footersection2{
-    width: 30%;
+    /* width: 30%; */
 }
 .m-left{
-    margin-left:40px;
+    margin-left: 21px;
     margin-top: 30px;
 }
 .saveresume-wrapper{
     background-color:rgb(212, 209, 209);
 }
 
+/* footer  social links*/
+
+    .footer-links{
+        display: flex;
+    }
+    .footer-links li{
+        list-style: none;
+        padding: 0px 15px;
+    }
+    .footer-links li a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: 0.5s;
+        font-size:16px;
+        color: white;
+    }
+    
+    .footer-links li a::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        Left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    .footer-links li a:hover{
+        background: white;;
+    }
+    .footer-links li a:hover .fa-facebook::before{
+        color: #4267B2 !important;
+    }
+    .footer-links li a:hover .fa-google-plus::before{
+        color: #DB4437 !important;
+    }
+    .footer-links li a:hover .fa-linkedin::before{
+        color: #0077B5 !important;
+    }
+    .footer-links li a:hover .fa-instagram::before{
+        color: #C32AA3 !important;
+    }
+    .footer-links li a:hover .fa-twitter::before{
+        color: #1DA1F2 !important;
+    }
+    .footer-text{
+        padding-top: 20px;
+        font:13px 'Roboto-light',sans-serif;
+        color: #6D6D6D;
+    }
+
+/* footer  social links*/
+
+
+/* faq drop down css */
+
+.faq-section{
+    display: flex;
+    width: 100%;
+  }
+    .faq-wraper{
+      width: 100%;
+      padding-top: 55px;
+      padding-right: 24px;
+      padding-left: 202px;
+    }
+  
+    .faq-wraper-two{
+      width: 100%;
+      padding-top: 55px;
+      padding-right: 202px;
+      padding-left: 6px;
+    }
+  
+  .faq-box{
+    width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 7px;
+      border: 1px solid #edeff0;
+      padding: 4px 0px;
+      margin-bottom: 20px;
+  }
+  
+  .faq-box .accordion p:after {
+    content: '\002B';
+    color: white;
+    background-color: #2794ba;
+    border-radius:50%;
+    padding:2px 9px;
+    float: right;
+    font-size: 16px;
+    margin-right: 20px;
+    
+  }
+  .faq-box .panel{
+    padding: 5px 20px;
+    /* margin-top: 10px; */
+    font: 16px 'Poppins',Arial,sans-serif;;
+    color: #81919a;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .faq-box .accordion{
+    width: 100%;
+    background-color: transparent;
+    border:none;
+    text-align:left ;
+    padding-top: 20px;
+  }
+  .faq-box .accordion :hover{
+    cursor: pointer;
+  }
+  .faq-box p{
+    font: 20px 'Poppins',Arial,sans-serif;
+    color: black;
+    font-weight: 400;
+    padding-left:20px ;
+  }
+  
+/* faq drop down css */
 @media screen and (max-width:845px) {
     .ul-link {
         display: none;
