@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import "./layout.css";
 // import{GiHamburgerMenu} from "react-icons/gi";
@@ -31,7 +32,10 @@ const Layout = (props) => {
             </li> */}
 
             {/* button for login */}
-            <button className="btn button1">Register</button>
+            {/* <button className="btn button1" onClick={() => {window.location.href('./register')}}>Register</button> */}
+            <NavLink to="register" className="btn button1" >
+              Register
+            </NavLink>
             <button className="btn button1 btn-sign">
              Sign In
             </button>

@@ -7,6 +7,7 @@ import Home from "./features/home/home";
 import AuthService from './shared/services/helper';
 import Login from './Login/Sign_in';
 import SignUp from './Login/Register';
+import Register from "./Login/Register";
 // import header from './features/header/header';
 // import { Register } from './Login/Register';
 // import { Sign_in } from './Login/Sign_in';
@@ -31,6 +32,7 @@ const App = () => {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/resume-builder' component={Builder} />
+            <Route exact path='/register' component={Register} />
             <Redirect to='/' />
           </Switch>
         </Layout>
