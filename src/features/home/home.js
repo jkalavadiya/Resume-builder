@@ -1,4 +1,8 @@
 import React from "react";
+import Slider from 'react-slick';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import videoLink from "../../assets/video/homepage-cv-templates-carousel.mp4";
 import img_01 from "../../assets/img/img_01.png";
@@ -6,6 +10,19 @@ import img_02 from "../../assets/img/img_02.png";
 import img_03 from "../../assets/img/img_03.png";
 import img_04 from "../../assets/img/img_04.png";
 import img_05 from "../../assets/img/img_05.png";
+import resume1 from "../../assets/img/resume1.webp";
+import resume2 from "../../assets/img/resume2.webp";
+import resume3 from "../../assets/img/resume3.webp";
+import resume4 from "../../assets/img/resume4.webp";
+
+const settings = {
+    dots: true,
+    infinite: true,
+    speed:2000,
+	autoPlay: true,
+    slidesToShow: 3,
+    slidesToScroll:1
+  };
 
 const Home = () => {
   return (
@@ -43,26 +60,30 @@ const Home = () => {
         </div>
       </div>
 
-      {/* save resume section */}
+     {/* slider */}
+     <div className="slider-container">
+     <h2 className="title-step">Resume Template</h2>  
+     <div className="underline "></div>
+  
+     <Slider {...settings}>
+		 {/* <div className="slider-wrapper"> */}
 
-      {/* <div className="saveresume-container">
-        <div className="saveresume-wrapper">
-          <div>Save time with resume examples </div>
-        </div>
-      </div> */}
-      {/* <div className='career-path-conatiner'>
-                    <div className='career-path'>
-                        <h2>Resume Templates for Every Career Path.</h2>
-                        <div className='underline '></div>
-                        <p className='path-para'>You can pick one of our handcrafted resume templates above. You can start building your resume in less than 5 seconds, using predefined sections approved by recruiters worldwide. You can also customize it to your own needs and personality and hit 'Download'. It's THAT easy to use, even if you've never made a resume in your life before!</p>
+		<img  className="resume_img" src={resume1} ></img>
+		<img className="resume_img" src={resume2} ></img>
+		<img className="resume_img" src={resume3} ></img>
+		<img className="resume_img" src={resume4} ></img>
+		 {/* </div> */}
+    </Slider>
+	</div>
 
-                        <img className='img_05' src={img_05}></img>
-                        <p className='p-span'>Creative Resume Template<span className='span'>Professional Resume template</span><span className='span'>College Resume Template</span></p>
-                    
-                    </div>
+    <div className="resume-sample_wrapper">
+	<h2 className="title-step sample">Get inspired by resume samples from professional resume experts</h2>
+	<h2 className="title-step sample f-size18">Search by job title to find resumes from resume experts that can inspire your own resume creation.</h2>
+	<div>
+		
+	</div>
 
-
-                    </div> */}
+	</div>
 
       <div className="steps">
         <div>
@@ -198,8 +219,7 @@ const Home = () => {
             </p>
             <p className="f-25size mt-30">
               With a resume builder, you don't have to worry about the hassle of
-              creating a resume, including font selection, layout, formatting,
-              etc.
+              creating a resume, including font selection, layout, formatting,git
             </p>
             <p className="f-25size mt-30">
               All you have to do is choose a resume template, fill it out, and
