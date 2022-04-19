@@ -359,9 +359,7 @@ a:hover {
     display: flex;
     justify-content: center;
 }
-.faq-content{
-    /* width:50%; */
-}
+
 .first-faq-content{
     display: flex;
     justify-content: center;
@@ -378,12 +376,6 @@ a:hover {
 }
 .f-40size{
     font-size: 40px;
-}
-.footersection1{
-    /* width:50%; */
-}
-.footersection2{
-    /* width: 30%; */
 }
 .m-left{
     margin-left: 21px;

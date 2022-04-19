@@ -1,14 +1,22 @@
 import React from "react";
 import { icons } from "react-icons/lib";
 import loginImg from "./login.svg";
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+
 // import "./login.css";
 import {FaFacebookF,FaGooglePlus,FaLinkedin} from 'react-icons/fa';
+import { auth } from "./firebase";
 
 
 class Register extends React.Component{
 	state = {
-		activePanel : false
+		activePanel : false,
+		userCredentials : {
+			email:'1@gmail.com',
+			password:'aryan@123'
+		}
 	};
+
 
     render(){
 		const {activePanel} = this.state;
@@ -27,9 +35,9 @@ class Register extends React.Component{
 	 		
 			<span>or use your email for registration</span>
 	 		<input type="text" placeholder="Name" />
-		<input type="email" placeholder="Email" /> 
+		<input type="email"  placeholder="Email" /> 
 	<input type="password" placeholder="Password" />
-		<button className="btn-login">Sign Up</button>
+		<button className="btn-login" onClick={this.handleRegisterUser()}>Sign Up</button>
  	</form>
  </div>
 	<div className="form-container sign-in-container">
@@ -43,8 +51,8 @@ class Register extends React.Component{
 	 		<span>or use your account</span>
 	 		<input type="email" placeholder="Email" />
 	 		<input type="password" placeholder="Password" />
-	 		<a href="#">Forgot your password?</a>
-	 		<button className="btn-login">Sign In</button>
+	 		<a href="/">Forgot your password?</a>
+	 		<button className="btn-login" > Sign In</button>
 	 	</form>
  </div>
 	 <div className="overlay-container">
@@ -70,6 +78,21 @@ class Register extends React.Component{
 
 	handleSwap = () => {
 	
+	}
+
+	handleRegisterUser = () => {
+		createUserWithEmailAndPassword(auth, this.state.userCredentials.email, this.state.userCredentials.password)
+  .then((userCredential) => {
+	  console.log(userCredential);
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
 	}
 }
 

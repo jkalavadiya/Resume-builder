@@ -8,6 +8,7 @@ import AuthService from './shared/services/helper';
 import Login from './Login/Sign_in';
 import SignUp from './Login/Register';
 import Register from "./Login/Register";
+import { useState } from "react/cjs/react.production.min";
 // import header from './features/header/header';
 // import { Register } from './Login/Register';
 // import { Sign_in } from './Login/Sign_in';
@@ -24,6 +25,23 @@ import Register from "./Login/Register";
 // export default App;
 
 const App = () => {
+
+  // const [registerEmail, setRegisterEmail] = useState("");
+  // const [registerPassword, setRegisterPassword] = useState("");
+  // const [loginEmail, setLoginEmail] = useState("");
+  // const [loginPassword, setLogPassword] = useState("");
+
+  // const register = async () => {
+
+  // };
+
+  // const login = async () => {
+
+  // };
+
+  // const logout = async () => {
+
+  // };
   // const isLoggedIn = AuthService.checkLogin();
   return (
     <div className="App">
