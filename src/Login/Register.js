@@ -1,17 +1,21 @@
 import React from "react";
 import { icons } from "react-icons/lib";
 import loginImg from "./login.svg";
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'firebase/auth';
 
 // import "./login.css";
 import {FaFacebookF,FaGooglePlus,FaLinkedin} from 'react-icons/fa';
 import { auth } from "./firebase";
 
 
-class Register extends React.Component{
+class Register extends React.Component {
 	state = {
 		activePanel : false,
 		userCredentials : {
+			email:'1@gmail.com',
+			password:'aryan@123'
+		},
+		loginCredentials : {
 			email:'1@gmail.com',
 			password:'aryan@123'
 		}
@@ -25,7 +29,7 @@ class Register extends React.Component{
 			
        <div className={activePanel ? 'right-panel-active container' : 'container'}>
         <div className="form-container sign-up-container">
-	 	<form action="#">
+	 	<form>
 			<h1>Create Account</h1>
 			{/* <div className="social-container">
 			<div className="button"><FaFacebookF  size={"25px"}/></div>
@@ -34,14 +38,14 @@ class Register extends React.Component{
        </div> */}
 	 		
 			<span>or use your email for registration</span>
-	 		<input type="text" placeholder="Name" />
-		<input type="email"  placeholder="Email" /> 
-	<input type="password" placeholder="Password" />
-		<button className="btn-login" onClick={this.handleRegisterUser()}>Sign Up</button>
+	 		<input type="text"  placeholder="Name" />
+		<input type="email" onChange={(e) => this.handleChange(e,'email')} placeholder="Email" /> 
+	<input type="password" onChange={(e) => this.handleChange(e,'password')} placeholder="Password" />
+		<button type="button" className="btn-login"   onClick={() => this.handleRegisterUser()}>Sign Up</button>
  	</form>
  </div>
 	<div className="form-container sign-in-container">
-	 	<form action="#">
+	 	<form>
 	 		<h1>Sign in</h1>
 	 		<div className="social-container">
 	 			{/* <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
@@ -49,10 +53,10 @@ class Register extends React.Component{
 	 			<a href="#" className="social"><i className="fab fa-linkedin-in"></i></a> */}
 	 		</div>
 	 		<span>or use your account</span>
-	 		<input type="email" placeholder="Email" />
-	 		<input type="password" placeholder="Password" />
+	 		<input onChange={(e) => this.handleLoginChange(e,'email')} type="email" placeholder="Email" />
+	 		<input onChange={(e) => this.handleLoginChange(e,'password')} type="password" placeholder="Password" />
 	 		<a href="/">Forgot your password?</a>
-	 		<button className="btn-login" > Sign In</button>
+	 		<button onClick={() => this.handleLoginUser()} type="button" className="btn-login" > Sign In</button>
 	 	</form>
  </div>
 	 <div className="overlay-container">
@@ -80,19 +84,58 @@ class Register extends React.Component{
 	
 	}
 
+	handleChange = (value,key) => {
+		this.setState({
+			userCredentials:{
+				...this.state.userCredentials,
+				[key] : value.target.value
+			}
+		})
+	}
+
+	handleLoginChange = (value,key) => {
+		this.setState({
+			loginCredentials:{
+				...this.state.loginCredentials,
+				[key] : value.target.value
+			}
+		})
+	}
+
 	handleRegisterUser = () => {
 		createUserWithEmailAndPassword(auth, this.state.userCredentials.email, this.state.userCredentials.password)
   .then((userCredential) => {
 	  console.log(userCredential);
     // Signed in 
+	this.setState({activePanel : !this.state.activePanel})
     const user = userCredential.user;
     // ...
   })
+
+ 
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
   });
+	}
+
+	handleLoginUser = () => {
+		signInWithEmailAndPassword(auth, this.state.loginCredentials.email, this.state.loginCredentials.password)
+		.then((userCredential) => {
+			console.log(userCredential);
+		  // Signed in 
+		//   this.setState({activePanel : !this.state.activePanel})
+		  const user = userCredential.user;
+		  window.location.href = '/'
+		  // ...
+		})
+		.catch((error) => {
+		  const errorCode = error.code;
+		  const errorMessage = error.message;
+		  console.log(error);
+		  // ..
+		});
 	}
 }
 
