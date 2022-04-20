@@ -539,6 +539,7 @@ a:hover {
   .sample{
       width:60%;
       margin: 0 auto;
+      margin-bottom: 25px;
     }
     .fistline{
         display: flex;
@@ -552,7 +553,13 @@ a:hover {
         padding:8px;
         border: 2px solid rgb(43 ,40, 67);
         border-radius:30px;
-        margin: 20px;
+        margin: 15px;
+    }
+    .first:hover {
+        border: 0.125rem solid #440ccc;
+    }
+    .resume-sample_wrapper {
+        padding: 75px 0;
     }
     .m-top20{
         margin-top:-20px;
@@ -561,12 +568,23 @@ a:hover {
         background-color: rgb(43 ,40, 67);
         color: white;
         border:  none;
-        padding:15px;
+        padding: 20px 30px;
         border-radius: 10px;
     }
     .exploresample{
         text-align: center;
+        margin-top: 40px;
+        /* padading-top: 35px; */
     }
+
+    .slick-next{
+        right: 0 !important;
+    }
+
+.slick-slider{
+    padding-top: 75px;
+}
+
  
 /* faq drop down css */
 @media screen and (max-width:845px) {
