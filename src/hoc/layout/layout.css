@@ -490,7 +490,22 @@ a:hover {
     float: right;
     font-size: 16px;
     margin-right: 20px;
-    
+  }
+  .accordian-para{
+    font: 16px 'Poppins',Arial,sans-serif !important;
+    color: black;
+    font-weight: 400;
+  }
+  .accordian-ulist{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-items: start !important;
+  }
+  .accordian-list{
+    padding-bottom: 27px;
+    font: 16px 'Poppins',Arial,sans-serif;
+    padding-left: 20px;
   }
   .faq-box .panel{
     padding: 5px 20px;
@@ -500,7 +515,10 @@ a:hover {
     background-color: white;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.8s ease-out;
+}
+.show {
+    max-height: none !important;
   }
   .faq-box .accordion{
     width: 100%;
