@@ -79,9 +79,44 @@ const Home = () => {
     <div className="resume-sample_wrapper">
 	<h2 className="title-step sample">Get inspired by resume samples from professional resume experts</h2>
 	<h2 className="title-step sample f-size18">Search by job title to find resumes from resume experts that can inspire your own resume creation.</h2>
-	<div>
+  <div className="fistline "> 
+   <div className="first">Accountant</div>
+  <div className="first">Security Guard</div>
+  <div className="first">Engineer</div>
+  <div className="first">Java Developer</div>
+  <div className="first">Designer</div>
+  </div>
+
+
+	<div className="fistline  m-top20">
+  <div className="first">Recruiter</div>
+  <div className="first">Product Manager</div>
+  <div className="first">Dentist</div>
+  <div className="first">Digital Marketing</div>
+  <div className="first">Sales Associate</div>
+  <div className="first">Managment</div>
 		
 	</div>
+	<div className="fistline  m-top20">
+  <div className="first">Physician Assitant</div>
+  <div className="first">Product Manager</div>
+  <div className="first">Front end Developer</div>
+  <div className="first">Nursing</div>
+  <div className="first">Civil Engineer</div>
+  <div className="first">office Assitant</div>
+		
+	</div>
+	<div className="fistline m-top20">
+  <div className="first">Photographer</div>
+  <div className="first">Finace</div>
+  <div className="first">Teacher</div>
+  
+		
+	</div>
+  <div className="exploresample">
+    <button type="button" className="explorebtn">Explore All Samples</button>
+
+  </div>
 
 	</div>
 

@@ -205,5 +205,16 @@ input {
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
-
+.google{
+	display: flex;
+	margin-top: 10px;
+	background-color: #DB4A39;
+}
+.p-right10{
+	padding-right: 10px;
+	list-style-type: none;
+}
+.white{
+	color: white;
+}
 

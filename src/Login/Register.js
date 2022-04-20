@@ -42,6 +42,8 @@ class Register extends React.Component {
 		<input type="email" onChange={(e) => this.handleChange(e,'email')} placeholder="Email" /> 
 	<input type="password" onChange={(e) => this.handleChange(e,'password')} placeholder="Password" />
 		<button type="button" className="btn-login"   onClick={() => this.handleRegisterUser()}>Sign Up</button>
+		<div><button type="button" className="btn-login google"><li className="p-right10"><a href="#"> <i className="fa fa-google-plus white"></i></a></li>Google</button></div>
+		
  	</form>
  </div>
 	<div className="form-container sign-in-container">

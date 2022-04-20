@@ -30,6 +30,9 @@ body{
 
 ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -75,7 +78,7 @@ a:hover {
     background-color: rgb(43 ,40, 67);
     border: 2px solid rgb(43 ,40, 67);
     border-radius: 25px;
-    padding: 7px 9px;
+    padding: 10px 20px;
     font-size: 12px;
     letter-spacing: 1.0px;
     color: white;
@@ -537,6 +540,34 @@ a:hover {
       width:60%;
       margin: 0 auto;
     }
+    .fistline{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        
+    }
+    .first{
+        padding:8px;
+        border: 2px solid rgb(43 ,40, 67);
+        border-radius:30px;
+        margin: 20px;
+    }
+    .m-top20{
+        margin-top:-20px;
+    }
+    .explorebtn{
+        background-color: rgb(43 ,40, 67);
+        color: white;
+        border:  none;
+        padding:15px;
+        border-radius: 10px;
+    }
+    .exploresample{
+        text-align: center;
+    }
+ 
 /* faq drop down css */
 @media screen and (max-width:845px) {
     .ul-link {
