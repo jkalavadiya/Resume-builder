@@ -7,7 +7,13 @@ import "./layout.css";
 // import {Facebook} from "react-icons/fa";
 // import { Facebook } from 'react-feather';
 
+import { checkLogin, getAuthData } from '../../shared/services/auth.service';
+
+
 const Layout = (props) => {
+  const isLogIn = checkLogin();
+  const userData = getAuthData();
+
   return (
     <>
       <nav className="main-nav">
@@ -33,12 +39,21 @@ const Layout = (props) => {
 
             {/* button for login */}
             {/* <button className="btn button1" onClick={() => {window.location.href('./register')}}>Register</button> */}
-            <NavLink to="register" className="btn button1" >
-              Register
-            </NavLink>
-            <button className="btn button1 btn-sign">
-             Sign In
-            </button>
+            {!isLogIn && (
+              <>
+                <NavLink to="register" className="btn button1" >
+                  Register
+                </NavLink>
+                <button className="btn button1 btn-sign">
+                Sign In
+                </button>
+              </>
+            )}
+            {isLogIn && (
+              <p>
+                {userData}
+              </p>
+            )}
           </ul>
         </div>
       </nav>

@@ -12,8 +12,8 @@ class Register extends React.Component {
 	state = {
 		activePanel : false,
 		userCredentials : {
-			email:'1@gmail.com',
-			password:'aryan@123'
+			email:'',
+			password:''
 		},
 		loginCredentials : {
 			email:'1@gmail.com',
@@ -96,6 +96,7 @@ class Register extends React.Component {
 				[key] : value.target.value
 			}
 		})
+		localStorage.setItem('signup-email',this.state.userCredentials.email);
 	}
 
 	handleLoginChange = (value,key) => {
@@ -105,6 +106,7 @@ class Register extends React.Component {
 				[key] : value.target.value
 			}
 		})
+		localStorage.setItem('login-email',this.state.loginCredentials.email);
 	}
 
 	handleRegisterUser = () => {
