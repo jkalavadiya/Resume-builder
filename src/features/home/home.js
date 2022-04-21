@@ -345,7 +345,7 @@ const Home = () => {
               </li>
             </ul>
           </div> */}
-          <div className="faq-section">
+          <div className="faq-section container-width">
         <div className="faq-wraper">
             <div className="faq-box"  onClick={()=>toggleDiv('div1')}>
                    <button className="accordion" > <p>Why should I use a resume builder?</p></button>
@@ -396,11 +396,9 @@ const Home = () => {
               </li>
             </ul>
                    </div>
+                   
             </div>
-        </div>
-
-        <div className="faq-wraper-two">
-        <div className="faq-box" onClick={()=>toggleDiv('div3')}>
+            <div className="faq-box" onClick={()=>toggleDiv('div3')}>
                 <button className="accordion"><p> Is this a completely free resume builder?</p></button>
                 <div className={`panel ${showDiv ==='div3'? 'show':''} `}>
                 <p class="accordian-para">
@@ -420,43 +418,32 @@ const Home = () => {
             </p>
                    </div>
             </div>
-             <div className="faq-box" onClick={()=>toggleDiv('div4')}>
-                    <button className="accordion"><p>What is a resume?</p></button>
-                    <div className={`panel ${showDiv ==='div4'? 'show':''} `}>
-                          <p class="accordian-para">
-                          A resume (also known as a CV or curriculum vitae) is a 1-2 page
-                          document that summarizes your work experience and professional
-                          history.
-                        </p>
-                        <p class="accordian-para">
-                          It typically includes the following information:
-                        </p>
-                          <ul className="accordian-ulist">
-                            <li className="accordian-list">your work experience</li>
-                            <li className="accordian-list">Training</li>
-                            <li className="accordian-list">Your achievements</li>
-                            <li className="accordian-list">Contact information</li>
-                            <li className="accordian-list">
-                              An extract with your professional profile or job objective
-                            </li>
-                          </ul>
-                       </div>
-            </div>
-            
-            {/* <div className="faq-box" onClick={()=>toggleDiv('div5')}>
-               <button className="accordion"> <p>How long is my domain name valid? </p></button>
-               <div className={`panel ${showDiv ==='div5'? 'show':''} `}>
-                When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
-               </div>
+
+            <div className="faq-box" onClick={()=>toggleDiv('div3')}>
+                <button className="accordion"><p> Is this a completely free resume builder?</p></button>
+                <div className={`panel ${showDiv ==='div3'? 'show':''} `}>
+                <p class="accordian-para">
+              Yes, Novorésumé is a 100% free resume generator.
+            </p>
+            <p class="accordian-para">
+              If you have a limited budget, you can use it to create your resume
+              completely free of charge. And no, unlike other resume builders
+              out there, you won't be met with a payment page once you've
+              completed it.
+            </p>
+            <p class="accordian-para">
+              If you use any of our premium features, the software will let you
+              know. It will then ask you if you did it accidentally or if you
+              want to upgrade your account to Novorésumé Premium. You have the
+              control!
+            </p>
+                   </div>
             </div>
 
-            <div className="faq-box" onClick={()=>toggleDiv('div6')}>
-                <button className="accordion "><p>Can I sell my domain name?</p></button>
-                <div className={`panel ${showDiv ==='div6'? 'show':''} `}>
-                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
-                   </div>
-            </div> */}
+            
         </div>
+
+        
         </div>
         </div>
       </div>

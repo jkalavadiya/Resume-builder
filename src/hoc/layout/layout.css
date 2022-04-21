@@ -474,12 +474,10 @@ a:hover {
 .faq-section{
     display: flex;
     width: 100%;
+    margin-top: 80px;
   }
     .faq-wraper{
       width: 100%;
-      padding-top: 55px;
-      padding-right: 24px;
-      padding-left: 202px;
     }
   
     .faq-wraper-two{
@@ -545,7 +543,7 @@ a:hover {
     background-color: transparent;
     border:none;
     text-align:left ;
-    padding-top: 20px;
+    padding-top: 10px;
   }
   .faq-box .accordion :hover{
     cursor: pointer;
