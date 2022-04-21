@@ -1,10 +1,10 @@
 import React from "react";
-import { icons } from "react-icons/lib";
-import loginImg from "./login.svg";
+// import { icons } from "react-icons/lib";
+// import loginImg from "./login.svg";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'firebase/auth';
 
 // import "./login.css";
-import {FaFacebookF,FaGooglePlus,FaLinkedin} from 'react-icons/fa';
+// import {FaFacebookF,FaGooglePlus,FaLinkedin} from 'react-icons/fa';
 import { auth } from "./firebase";
 
 
