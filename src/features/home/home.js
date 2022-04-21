@@ -7,9 +7,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import videoLink from "../../assets/video/homepage-cv-templates-carousel.mp4";
 import img_01 from "../../assets/img/img_01.png";
 import img_02 from "../../assets/img/img_02.png";
-import img_03 from "../../assets/img/img_03.png";
-import img_04 from "../../assets/img/img_04.png";
-import img_05 from "../../assets/img/img_05.png";
+// import img_03 from "../../assets/img/img_03.png";
+// import img_04 from "../../assets/img/img_04.png";
+// import img_05 from "../../assets/img/img_05.png";
 import resume1 from "../../assets/img/resume1.webp";
 import resume2 from "../../assets/img/resume2.webp";
 import resume3 from "../../assets/img/resume3.webp";
@@ -24,7 +24,11 @@ const settings = {
 	  autoplay: true,
     autoplaySpeed: 200,
     slidesToShow: 3,
-    slidesToScroll:1
+    slidesToScroll:1,
+    centerMode: true,
+    centerPadding: "60px",
+    cssEase: "linear",
+    initialSlide: 1
   };
 
 const Home = () => {
@@ -79,10 +83,10 @@ const Home = () => {
      <Slider {...settings}>
 		 {/* <div className="slider-wrapper"> */}
 
-		<img  className="resume_img" src={resume1} ></img>
-		<img className="resume_img" src={resume2} ></img>
-		<img className="resume_img" src={resume3} ></img>
-		<img className="resume_img" src={resume4} ></img>
+		<img  className="resume_img" src={resume1}  alt="slider-img" ></img>
+		<img className="resume_img" src={resume2} alt="slider-img"></img>
+		<img className="resume_img" src={resume3} alt="slider-img"></img>
+		<img className="resume_img" src={resume4} alt="slider-img"></img>
 		 {/* </div> */}
     </Slider>
 	</div>
@@ -158,7 +162,7 @@ const Home = () => {
             </div>
 
             <div className="animation">
-              <img className="img_1" src={img_01}></img>
+              <img className="img_1" src={img_01} alt="img"></img>
             </div>
           </div>
         </div>
@@ -185,7 +189,7 @@ const Home = () => {
 
             <div className="sec-img1">
               <div className="animation ani">
-                <img className="img_1" src={img_02}></img>
+                <img className="img_1" src={img_02} alt="img"></img>
               </div>
             </div>
           </div>
@@ -212,7 +216,7 @@ const Home = () => {
             </div>
 
             <div className="animation">
-              <img className="img_1" src={img_01}></img>
+              <img className="img_1" src={img_01} alt="img"></img>
             </div>
           </div>
         </div>
@@ -239,7 +243,7 @@ const Home = () => {
 
             <div className="sec-img1">
               <div className="animation ani">
-                <img className="img_1" src={img_02}></img>
+                <img className="img_1" src={img_02} alt="img"></img>
               </div>
             </div>
           </div>
@@ -345,7 +349,7 @@ const Home = () => {
               </li>
             </ul>
           </div> */}
-          <div className="faq-section container-width">
+          <div className="faq-section">
         <div className="faq-wraper">
             <div className="faq-box"  onClick={()=>toggleDiv('div1')}>
                    <button className="accordion" > <p>Why should I use a resume builder?</p></button>
@@ -396,54 +400,67 @@ const Home = () => {
               </li>
             </ul>
                    </div>
-                   
             </div>
-            <div className="faq-box" onClick={()=>toggleDiv('div3')}>
-                <button className="accordion"><p> Is this a completely free resume builder?</p></button>
-                <div className={`panel ${showDiv ==='div3'? 'show':''} `}>
-                <p class="accordian-para">
-              Yes, Novorésumé is a 100% free resume generator.
-            </p>
-            <p class="accordian-para">
-              If you have a limited budget, you can use it to create your resume
-              completely free of charge. And no, unlike other resume builders
-              out there, you won't be met with a payment page once you've
-              completed it.
-            </p>
-            <p class="accordian-para">
-              If you use any of our premium features, the software will let you
-              know. It will then ask you if you did it accidentally or if you
-              want to upgrade your account to Novorésumé Premium. You have the
-              control!
-            </p>
-                   </div>
-            </div>
-
-            <div className="faq-box" onClick={()=>toggleDiv('div3')}>
-                <button className="accordion"><p> Is this a completely free resume builder?</p></button>
-                <div className={`panel ${showDiv ==='div3'? 'show':''} `}>
-                <p class="accordian-para">
-              Yes, Novorésumé is a 100% free resume generator.
-            </p>
-            <p class="accordian-para">
-              If you have a limited budget, you can use it to create your resume
-              completely free of charge. And no, unlike other resume builders
-              out there, you won't be met with a payment page once you've
-              completed it.
-            </p>
-            <p class="accordian-para">
-              If you use any of our premium features, the software will let you
-              know. It will then ask you if you did it accidentally or if you
-              want to upgrade your account to Novorésumé Premium. You have the
-              control!
-            </p>
-                   </div>
-            </div>
-
-            
         </div>
 
-        
+        <div className="faq-wraper-two">
+        <div className="faq-box" onClick={()=>toggleDiv('div3')}>
+                <button className="accordion"><p> Is this a completely free resume builder?</p></button>
+                <div className={`panel ${showDiv ==='div3'? 'show':''} `}>
+                <p class="accordian-para">
+              Yes, Novorésumé is a 100% free resume generator.
+            </p>
+            <p class="accordian-para">
+              If you have a limited budget, you can use it to create your resume
+              completely free of charge. And no, unlike other resume builders
+              out there, you won't be met with a payment page once you've
+              completed it.
+            </p>
+            <p class="accordian-para">
+              If you use any of our premium features, the software will let you
+              know. It will then ask you if you did it accidentally or if you
+              want to upgrade your account to Novorésumé Premium. You have the
+              control!
+            </p>
+                   </div>
+            </div>
+             <div className="faq-box" onClick={()=>toggleDiv('div4')}>
+                    <button className="accordion"><p>What is a resume?</p></button>
+                    <div className={`panel ${showDiv ==='div4'? 'show':''} `}>
+                          <p class="accordian-para">
+                          A resume (also known as a CV or curriculum vitae) is a 1-2 page
+                          document that summarizes your work experience and professional
+                          history.
+                        </p>
+                        <p class="accordian-para">
+                          It typically includes the following information:
+                        </p>
+                          <ul className="accordian-ulist">
+                            <li className="accordian-list">your work experience</li>
+                            <li className="accordian-list">Training</li>
+                            <li className="accordian-list">Your achievements</li>
+                            <li className="accordian-list">Contact information</li>
+                            <li className="accordian-list">
+                              An extract with your professional profile or job objective
+                            </li>
+                          </ul>
+                       </div>
+            </div>
+            
+            {/* <div className="faq-box" onClick={()=>toggleDiv('div5')}>
+               <button className="accordion"> <p>How long is my domain name valid? </p></button>
+               <div className={`panel ${showDiv ==='div5'? 'show':''} `}>
+                When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
+               </div>
+            </div>
+
+            <div className="faq-box" onClick={()=>toggleDiv('div6')}>
+                <button className="accordion "><p>Can I sell my domain name?</p></button>
+                <div className={`panel ${showDiv ==='div6'? 'show':''} `}>
+                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
+                   </div>
+            </div> */}
+        </div>
         </div>
         </div>
       </div>

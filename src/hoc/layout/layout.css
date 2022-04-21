@@ -13,6 +13,7 @@ body{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -24,9 +25,9 @@ body{
     
 }
 
-.logo {
+/* .logo {
     margin: 17px 0px;
-}
+} */
 
 .logo h2 {
     font-size: 30px;
@@ -42,9 +43,13 @@ ul {
     align-items: center;
 }
 
-/* p{
-    margin: 20px 30px !important;
-} */
+p{
+    margin: 20px 0px!important;
+}
+
+.logout-para{
+    margin: 0 !important;
+}
 
 a {
     text-decoration: none;
@@ -59,7 +64,7 @@ a:hover {
 
 .list {
     float: left;
-    margin: 25px;
+    margin: 0px 25px;
 }
 .mt-10{
     margin-top: 10px;
@@ -128,6 +133,7 @@ a:hover {
         font-family: 'Poppins';
         font-weight: 600;
         letter-spacing: 1.0px;
+        transition: 0.5s all ease-in-out;
 }
 
 
@@ -472,9 +478,10 @@ a:hover {
 /* faq drop down css */
 
 .faq-section{
-    display: flex;
+    /* display: flex; */
     width: 100%;
     margin-top: 80px;
+    max-width: 1200px;
   }
     .faq-wraper{
       width: 100%;
@@ -482,8 +489,8 @@ a:hover {
   
     .faq-wraper-two{
       width: 100%;
-      padding-top: 55px;
-      padding-right: 202px;
+      /* padding-top: 55px;
+      padding-right: 202px; */
       padding-left: 6px;
     }
   

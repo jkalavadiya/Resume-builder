@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect,useState} from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import "./layout.css";
@@ -13,6 +13,14 @@ import { checkLogin, getAuthData } from '../../shared/services/auth.service';
 const Layout = (props) => {
   const isLogIn = checkLogin();
   const userData = getAuthData();
+  const [isLoggedIn , setIsLoggedIn] = useState(false)
+
+
+  useEffect(() => {
+    setIsLoggedIn(checkLogin())
+  } , [])
+
+
 
   return (
     <>
@@ -41,20 +49,26 @@ const Layout = (props) => {
 
             {/* button for login */}
             {/* <button className="btn button1" onClick={() => {window.location.href('./register')}}>Register</button> */}
-            {!isLogIn && (
+            {(!isLogIn || !isLoggedIn) && (
               <>
                 <NavLink to="register" className="btn button1" >
                   Register
                 </NavLink>
-                <button className="btn button1 btn-sign">
+                {/* <button className="btn button1 btn-sign">
                 Sign In
-                </button>
+                </button> */}
               </>
             )}
             {isLogIn && (
-              <p>
+              <p className="logout-para">
                 {userData}
+                <button onClick={() => {
+                  // window.location.reload = true
+                  localStorage.removeItem('login-email');
+                  setIsLoggedIn(false)
+                }} className="btn button1 btn-sign">Log Out</button>
               </p>
+              
             )}
           </ul>
           </div>

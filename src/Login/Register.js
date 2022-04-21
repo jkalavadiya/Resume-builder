@@ -106,7 +106,6 @@ class Register extends React.Component {
 				[key] : value.target.value
 			}
 		})
-		localStorage.setItem('login-email',this.state.loginCredentials.email);
 	}
 
 	handleRegisterUser = () => {
@@ -131,7 +130,8 @@ class Register extends React.Component {
 		signInWithEmailAndPassword(auth, this.state.loginCredentials.email, this.state.loginCredentials.password)
 		.then((userCredential) => {
 			console.log(userCredential);
-		  // Signed in 
+		localStorage.setItem('login-email',this.state.loginCredentials.email);
+		// Signed in 
 		//   this.setState({activePanel : !this.state.activePanel})
 		  const user = userCredential.user;
 		  window.location.href = '/'
