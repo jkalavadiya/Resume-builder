@@ -18,6 +18,8 @@ const Layout = (props) => {
     <>
       <nav className="main-nav">
         {/* first logo part */}
+        <div class="container-width">
+
         <div className="logo">
           <h2>Resume</h2>
         </div>
@@ -55,6 +57,7 @@ const Layout = (props) => {
               </p>
             )}
           </ul>
+          </div>
         </div>
       </nav>
 

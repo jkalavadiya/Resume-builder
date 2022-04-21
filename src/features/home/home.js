@@ -14,6 +14,8 @@ import resume1 from "../../assets/img/resume1.webp";
 import resume2 from "../../assets/img/resume2.webp";
 import resume3 from "../../assets/img/resume3.webp";
 import resume4 from "../../assets/img/resume4.webp";
+// import Sagar from "../sagar-changes/Sagar";
+
 
 const settings = {
     dots: true,
@@ -33,6 +35,7 @@ const Home = () => {
   }
   return (
     <>
+    {/* <div class="container"> */}
       <div className="conatiner-wrapper">
         <div className="text-wrapper">
           <h1 className="text-h1 mt-10">
@@ -65,7 +68,9 @@ const Home = () => {
           </video>
         </div>
       </div>
+    {/* </div> */}
 
+    {/* <Sagar /> */}
      {/* slider */}
      <div className="slider-container">
      <h2 className="title-step">Resume Template</h2>  

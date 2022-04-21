@@ -15,14 +15,15 @@
 } */
 
 h1 {
-	font-weight: bold;
+	font-weight: 600;
 	margin: 0;
+	font-size: 40px;
 }
 
 
 p {
 	font-size: 14px;
-	font-weight: 100;
+	font-weight: 400;
 	line-height: 20px;
 	letter-spacing: 0.5px;
 	margin: 20px 0 30px;
@@ -30,27 +31,30 @@ p {
 
 span {
 	font-size: 12px;
+	margin-bottom: 40px;
 }
 
 a {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
-	margin: 15px 0;
+	margin: 20px 0;
 }
 
 .btn-login {
-	border-radius: 20px;
+	border-radius: 10px;
 	border: 1px solid #008CBA;;
 	background-color: #008CBA;
 	color: #FFFFFF;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	padding: 12px 25px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
 	cursor: pointer;
+	font-family: 'Poppins';
+	margin-right: 30px;
 }
 
 .btn-login:active {
@@ -65,6 +69,13 @@ a {
 	cursor: pointer;
 	background-color: transparent;
 	border-color: #FFFFFF;
+}
+
+.btn-login.ghost:hover{
+	cursor: pointer;
+	color: #008CBA;
+	background-color: #fff;
+	border-color: transparent;
 }
 
 form {
@@ -84,6 +95,13 @@ input {
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
+	font-family: "Poppins";
+	/* color: #008CBA; */
+}
+
+.input:focus{
+	color: #008CBA;
+	/* border-color: #008CBA; */
 }
 
 .container {
@@ -208,7 +226,7 @@ input {
 }
 .google{
 	display: flex;
-    width: 100%;
+    /* width: 100%; */
 	background-color: #DB4A39;
 	cursor: pointer;
 }
@@ -224,8 +242,8 @@ input {
 .login-btn{
 	margin-top: 15px;
     display: flex;
-    justify-content: space-between;
-    width:50%;
+    /* justify-content: space-between; */
+    /* width:50%; */
 }
 .p-left12{
 	padding-left: 10px;

@@ -8,16 +8,24 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+.container-width{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
 .main-nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     box-shadow: rgb(0 0 0 / 15%) 0px 3px 3px 0px;
+    
 }
 
 .logo {
-    margin: 17px 93px;
+    margin: 17px 0px;
 }
 
 .logo h2 {
@@ -25,7 +33,6 @@ body{
     font-weight: 900;
     text-transform: uppercase;
     color:rgb(43 ,40, 67);
-
 }
 
 ul {
@@ -35,9 +42,13 @@ ul {
     align-items: center;
 }
 
+p{
+    margin: 20px 30px !important;
+}
+
 a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     color: black;
 }
 
@@ -62,10 +73,9 @@ a:hover {
 .mt-40{
     margin-top: 40px;
 }
-
 .btn {
     display: inline-block;
-    margin: 20px 16px;
+    margin: 20px 10px;
     border: none;
     background-color: white;
     text-align: center;
@@ -79,7 +89,7 @@ a:hover {
     border: 2px solid rgb(43 ,40, 67);
     border-radius: 25px;
     padding: 10px 20px;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1.0px;
     color: white;
     font-weight: 600;
@@ -92,10 +102,11 @@ a:hover {
 
 .btn-sign {
     border-radius: 25px;
-    font-size: 12px;
+    font-size: 14px;
     background-color: white;
     color: black;
     font-weight: 600;
+    font-family: 'Poppins';
     letter-spacing: 1.0px;
 }
 
@@ -111,12 +122,14 @@ a:hover {
         color: white;
         background-color: rgb(43 ,40, 67);
         border: 4px solid transparent;
-        border-radius: 15px;
+        /* border-radius: 15px; */
         cursor: pointer;
         font-size: 14px;
+        font-family: 'Poppins';
         font-weight: 600;
         letter-spacing: 1.0px;
 }
+
 
 .btn-get:hover {
     background-color: white;
@@ -130,7 +143,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .text-wrapper {
@@ -140,8 +154,8 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     /* align-items: flex-start; */
-    width:50%;
-    margin-left: 50px;
+    width:40%;
+    /* margin-left: 50px; */
 }
 
 .text-h1 {
@@ -152,7 +166,7 @@ a:hover {
 }
 
 .text-p {
-    font-size: 20px;
+    font-size: 14px;
     /* letter-spacing: 1.5px; */
     letter-spacing: 0.5px;
     line-height: 2rem;
@@ -160,7 +174,8 @@ a:hover {
 }
 
 .video-section {
-    width: 50%;
+    width: 60%;
+    margin-right: -100px;
 }
 
 .video-wrapper {
@@ -178,10 +193,10 @@ a:hover {
 .underline {
     background-color: rgb(39 148 186);
     border-radius: 3px;
-    width: 310px;
+    width: 260px;
     height: 6px;
     text-align: center;
-    margin: 3px auto;
+    margin: 15px auto;
 }
 
 .text-container {
@@ -222,12 +237,17 @@ a:hover {
     border-radius: 15px;
 }
 
+.slick-slide{
+    width: 400px !important;
+}
+
 
 .text-details {
     background-color: rgb(39,148,186);
-    width:80%;
+    width: 80%;
     height: 200px;
-    border-radius: 13px;
+    padding: 10px 30px;
+    border-radius: 7px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -235,7 +255,6 @@ a:hover {
 
 .text-temp {
     color: white;
-    padding-left: 20px;
     font-size: 25px;
     font-weight:700;
 }
@@ -345,6 +364,7 @@ a:hover {
 .footer-content{
     display: flex;
     justify-content: space-evenly;
+    padding: 80px 0;
 }
 .faq-p{
     text-align: center;
@@ -558,6 +578,7 @@ a:hover {
       width:60%;
       margin: 0 auto;
       margin-bottom: 25px;
+      font-weight: 400;
     }
     .fistline{
         display: flex;
@@ -567,28 +588,36 @@ a:hover {
 
         
     }
+
     .first{
-        padding:8px;
+        padding:8px 18px;
         border: 2px solid rgb(43 ,40, 67);
         border-radius:30px;
-        margin: 15px;
+        margin: 20px 6px;
     }
+
     .first:hover {
         border: 0.125rem solid #440ccc;
     }
+
     .resume-sample_wrapper {
         padding: 75px 0;
     }
+
     .m-top20{
         margin-top:-20px;
     }
+
     .explorebtn{
         background-color: rgb(43 ,40, 67);
         color: white;
         border:  none;
-        padding: 20px 30px;
-        border-radius: 10px;
+        padding: 16px 30px;
+        /* border-radius: 10px; */
+        font-size: 16px;
+        font-family: 'Poppins';
     }
+    
     .exploresample{
         text-align: center;
         margin-top: 40px;
