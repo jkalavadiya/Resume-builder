@@ -48,9 +48,9 @@ class Register extends React.Component {
     render(){
 		const {activePanel} = this.state;
         return (
-			<div>
+			<div className="signup-content">
 			
-       <div className={activePanel ? 'right-panel-active container' : 'container'}>
+       <div className={` ${activePanel ? 'right-panel-active container' : 'container'}`}>
         <div className="form-container sign-up-container">
 	 	<form>
 			<h1>Create Account</h1>
