@@ -5,7 +5,10 @@ import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'fireb
 
 // import "./login.css";
 // import {FaFacebookF,FaGooglePlus,FaLinkedin} from 'react-icons/fa';
-import { auth } from "./firebase";
+// import firebase from "./firebase";
+import { GoogleAuthProvider,signInWithPopup } from 'firebase/auth';
+import app, {auth} from "./firebase";
+
 
 
 class Register extends React.Component {
@@ -21,6 +24,29 @@ class Register extends React.Component {
 		}
 	};
 
+	googleLogin = () => {
+		const provider = new GoogleAuthProvider();;
+		console.log(provider);
+		signInWithPopup(auth,provider).then((result) => {
+			const credential = GoogleAuthProvider.credentialFromResult(result);
+			const user  = result.user;
+			console.log(user);
+			localStorage.setItem('login-name' , user.displayName)
+			localStorage.setItem('login-email' , user.email)
+			window.location.href = '/'
+			
+		}).catch((error) => {
+			console.error(error);
+		});
+	}
+
+	onSuccessGoogleLogin = (data) => {
+		console.log(data);
+		if (data && data.idToken) {
+			// const referralCode = queryString.parse(this.props.location.search).referralCode || '';
+			// this.props.socialLogin('google', { idToken: data.idToken, referralCode: referralCode });
+		}
+	}
 
     render(){
 		const {activePanel} = this.state;
@@ -43,7 +69,11 @@ class Register extends React.Component {
 	<input type="password" onChange={(e) => this.handleChange(e,'password')} placeholder="Password" />
 	<div className="login-btn">
 	<button type="button" className="btn-login"   onClick={() => this.handleRegisterUser()}>Sign Up</button>
-		<div><button type="button" className="btn-login google"><li className="list-style">Sign up<a href="#"> <i className="fa fa-google-plus white p-left12"></i></a></li></button></div>
+		<div><button 
+			onClick={this.googleLogin}
+		type="button" className="btn-login google"><li className="list-style">Sign up<a href="#"> 
+		<i className="fa fa-google-plus white p-left12"></i></a></li>
+		</button></div>
 	</div>
 		
 		
