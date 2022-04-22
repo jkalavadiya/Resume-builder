@@ -8,9 +8,6 @@ import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'fireb
 // import firebase from "./firebase";
 import { GoogleAuthProvider,signInWithPopup } from 'firebase/auth';
 import app, {auth} from "./firebase";
-
-
-
 class Register extends React.Component {
 	state = {
 		activePanel : false,
@@ -31,8 +28,8 @@ class Register extends React.Component {
 			const credential = GoogleAuthProvider.credentialFromResult(result);
 			const user  = result.user;
 			console.log(user);
-			localStorage.setItem('login-name' , user.displayName)
-			localStorage.setItem('login-email' , user.email)
+			localStorage.setItem('login-email' , user.displayName)
+			localStorage.setItem('login-name' , user.email)
 			window.location.href = '/'
 			
 		}).catch((error) => {
