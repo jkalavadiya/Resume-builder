@@ -23,12 +23,11 @@ const settings = {
     speed:2000,
 	  autoplay: true,
     autoplaySpeed: 200,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll:1,
     centerMode: true,
     centerPadding: "60px",
-    cssEase: "linear",
-    initialSlide: 1
+    cssEase: "linear"
   };
 
 const Home = () => {
