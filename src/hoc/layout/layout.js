@@ -61,7 +61,10 @@ const Layout = (props) => {
             )}
             {isLogIn && (
               <p className="logout-para">
+                <span className="username-diaplay">
+
                 {userData}
+                </span>
                 <button onClick={() => {
                   // window.location.reload = true
                   localStorage.removeItem('login-email');
@@ -87,11 +90,11 @@ const Layout = (props) => {
             </div>
             <div className=" m-left white">Connect with us on social media</div>
             <ul className="footer-links">
-              <li><a href="#"> <i className="fa fa-facebook"></i></a></li>
-              <li><a href="#"> <i className="fa fa-twitter"></i></a></li>
-              <li><a href="#"> <i className="fa fa-google-plus"></i></a></li>
-              <li><a href="#"> <i className="fa fa-linkedin"></i></a></li>
-              <li><a href="#"> <i className="fa fa-instagram"></i></a></li>
+              <li><a href="/"> <i className="fa fa-facebook"></i></a></li>
+              <li><a href="/"> <i className="fa fa-twitter"></i></a></li>
+              <li><a href="/"> <i className="fa fa-google-plus"></i></a></li>
+              <li><a href="/"> <i className="fa fa-linkedin"></i></a></li>
+              <li><a href="/"> <i className="fa fa-instagram"></i></a></li>
             </ul>
           </div>
           <div className="footersection2">

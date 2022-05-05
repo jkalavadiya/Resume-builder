@@ -15,8 +15,8 @@ const header = () => {
               {/* second logo part */}
               <div className="menu-link">
                   <ul>
-                      <li><a href="#">Resume Templates</a></li>
-                      <li><a href="#">About us</a></li>
+                      <li><a href="/">Resume Templates</a></li>
+                      <li><a href="/">About us</a></li>
                   </ul>
               </div>
 
