@@ -57,4 +57,4 @@ Project is developed using the HTML, CSS, JavaScript, React JS and Firebase Auth
 
 
 ### Thank You!
-For more details Contact me on [LinkedIn](https://www.linkedin.com/in/sagarkumar-limbasiya/)
+For more details Contact me on [LinkedIn](https://www.linkedin.com/in/janvi-kalavadiya-206a00184/)
