@@ -16,7 +16,7 @@ Project is developed using the HTML, CSS, JavaScript, React JS and Firebase Auth
 
 <br>
 <p align="center">
-  <img src="images/log-in.png">
+  <img src="images/1.png">
 </p>
 <br>
 
