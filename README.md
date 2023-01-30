@@ -33,7 +33,7 @@ Project is developed using the HTML, CSS, JavaScript, React JS and Firebase Auth
 
 <br>
 <p align="center">
-  <img src="images/resume-page.png">
+  <img src="file:///home/scaletech/Documents/Janvi/scaletech-task/Resume-builder-In-React-JS-main/src/assets/imges/1.png">
 </p>
 <br>
 
